@@ -27,14 +27,28 @@ namespace TrelloConverter
             }
             else
             {
-                int length = int.Parse(this.LengthInput.Text);
-                int width = int.Parse(this.WidthInput.Text);
-                int height = int.Parse(this.HeigthInput.Text);
+                if (this.LengthInput.Text.Any(char.IsLetter) || this.WidthInput.Text.Any(char.IsLetter) || this.HeigthInput.Text.Any(char.IsLetter))
+                {
+                    MessageBox.Show("В поля нелья вводить буквы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (this.LengthInput.Text.Any(char.IsSymbol) || this.WidthInput.Text.Any(char.IsSymbol) || this.HeigthInput.Text.Any(char.IsSymbol))
+                    {
+                        MessageBox.Show("В поля нелья вводить символы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        int length = int.Parse(this.LengthInput.Text);
+                        int width = int.Parse(this.WidthInput.Text);
+                        int height = int.Parse(this.HeigthInput.Text);
 
-                int volume = length * width * height;
+                        int volume = length * width * height;
 
-                Console.WriteLine($"Result: {volume}");
-                Console.Show();
+                        Console.WriteLine($"Result: {volume}");
+                        Console.Show();
+                    }
+                }
             }
         }
 
@@ -47,16 +61,30 @@ namespace TrelloConverter
             }
             else
             {
-                int length = int.Parse(this.LengthInput.Text);
-                int width = int.Parse(this.WidthInput.Text);
-                int height = int.Parse(this.HeigthInput.Text);
+                if (this.LengthInput.Text.Any(char.IsLetter) || this.WidthInput.Text.Any(char.IsLetter) || this.HeigthInput.Text.Any(char.IsLetter))
+                {
+                    MessageBox.Show("В поля нелья вводить буквы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (this.LengthInput.Text.Any(char.IsSymbol) || this.WidthInput.Text.Any(char.IsSymbol) || this.HeigthInput.Text.Any(char.IsSymbol))
+                    {
+                        MessageBox.Show("В поля нелья вводить символы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        int length = int.Parse(this.LengthInput.Text);
+                        int width = int.Parse(this.WidthInput.Text);
+                        int height = int.Parse(this.HeigthInput.Text);
 
-                int volume = length * width * height;
+                        int volume = length * width * height;
 
-                int liters = volume / 1000;
+                        int liters = volume / 1000;
 
-                Console.WriteLine($"Liters: {liters}");
-                Console.Show();
+                        Console.WriteLine($"Liters: {liters}");
+                        Console.Show();
+                    }
+                }
             }
         }
 
@@ -69,18 +97,32 @@ namespace TrelloConverter
             }
             else
             {
-                int length = int.Parse(this.LengthInput.Text);
-                int width = int.Parse(this.WidthInput.Text);
-                int height = int.Parse(this.HeigthInput.Text);
+                if (this.LengthInput.Text.Any(char.IsLetter) || this.WidthInput.Text.Any(char.IsLetter) || this.HeigthInput.Text.Any(char.IsLetter))
+                {
+                    MessageBox.Show("В поля нелья вводить буквы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (this.LengthInput.Text.Any(char.IsSymbol) || this.WidthInput.Text.Any(char.IsSymbol) || this.HeigthInput.Text.Any(char.IsSymbol))
+                    {
+                        MessageBox.Show("В поля нелья вводить символы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        int length = int.Parse(this.LengthInput.Text);
+                        int width = int.Parse(this.WidthInput.Text);
+                        int height = int.Parse(this.HeigthInput.Text);
 
-                int volume = length * width * height;
+                        int volume = length * width * height;
 
-                int liters = volume / 1000;
+                        int liters = volume / 1000;
 
-                int milliliters = liters * 1000;
-                Console.Show();
+                        int milliliters = liters * 1000;
+                        Console.Show();
 
-                Console.WriteLine($"Milliliters: {milliliters}");
+                        Console.WriteLine($"Milliliters: {milliliters}");
+                    }
+                }
             }
         }
 
@@ -94,20 +136,34 @@ namespace TrelloConverter
             }
             else
             {
-                int length = int.Parse(this.LengthInput.Text);
-                int width = int.Parse(this.WidthInput.Text);
-                int height = int.Parse(this.HeigthInput.Text);
+                if (this.LengthInput.Text.Any(char.IsLetter) || this.WidthInput.Text.Any(char.IsLetter) || this.HeigthInput.Text.Any(char.IsLetter))
+                {
+                    MessageBox.Show("В поля нелья вводить буквы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (this.LengthInput.Text.Any(char.IsSymbol) || this.WidthInput.Text.Any(char.IsSymbol) || this.HeigthInput.Text.Any(char.IsSymbol))
+                    {
+                        MessageBox.Show("В поля нелья вводить символы!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        int length = int.Parse(this.LengthInput.Text);
+                        int width = int.Parse(this.WidthInput.Text);
+                        int height = int.Parse(this.HeigthInput.Text);
 
-                int volume = length * width * height;
+                        int volume = length * width * height;
 
-                int liters = volume / 1000;
+                        int liters = volume / 1000;
 
-                int milliliters = liters * 1000;
-                Console.Show();
+                        int milliliters = liters * 1000;
+                        Console.Show();
 
-                Console.WriteLine($"Volume: {volume}" +
-                    $"\nLiters: {liters}" +
-                    $"\nMilliliters: {milliliters}");
+                        Console.WriteLine($"Volume: {volume}" +
+                            $"\nLiters: {liters}" +
+                            $"\nMilliliters: {milliliters}");
+                    }
+                }
             }
         }
     }
