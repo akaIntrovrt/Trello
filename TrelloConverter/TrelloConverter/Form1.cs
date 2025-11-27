@@ -12,9 +12,76 @@ namespace TrelloConverter
 {
     public partial class Form1 : Form
     {
+        ConsoleForm Console = new ConsoleForm();
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void VolumeButton_Click(object sender, EventArgs e)
+        {
+            Console.Clear();
+            if(this.LengthInput.Text == "" || this.WidthInput.Text == "" || this.HeigthInput.Text == "")
+            {
+                MessageBox.Show("Поля ввода не могут быть пустыми.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int length = int.Parse(this.LengthInput.Text);
+                int width = int.Parse(this.WidthInput.Text);
+                int height = int.Parse(this.HeigthInput.Text);
+
+                int volume = length * width * height;
+
+                Console.WriteLine($"Result: {volume}");
+                Console.Show();
+            }
+        }
+
+        private void LitersButton_Click(object sender, EventArgs e)
+        {
+            Console.Clear();
+            if (this.LengthInput.Text == "" || this.WidthInput.Text == "" || this.HeigthInput.Text == "")
+            {
+                MessageBox.Show("Поля ввода не могут быть пустыми.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int length = int.Parse(this.LengthInput.Text);
+                int width = int.Parse(this.WidthInput.Text);
+                int height = int.Parse(this.HeigthInput.Text);
+
+                int volume = length * width * height;
+
+                int liters = volume / 1000;
+
+                Console.WriteLine($"Liters: {liters}");
+                Console.Show();
+            }
+        }
+
+        private void MilliliButton_Click(object sender, EventArgs e)
+        {
+            Console.Clear();
+            if (this.LengthInput.Text == "" || this.WidthInput.Text == "" || this.HeigthInput.Text == "")
+            {
+                MessageBox.Show("Поля ввода не могут быть пустыми.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                int length = int.Parse(this.LengthInput.Text);
+                int width = int.Parse(this.WidthInput.Text);
+                int height = int.Parse(this.HeigthInput.Text);
+
+                int volume = length * width * height;
+
+                int liters = volume / 1000;
+
+                int milliliters = liters * 1000;
+                Console.Show();
+
+                Console.WriteLine($"Milliliters: {milliliters}");
+            }
         }
     }
 }
